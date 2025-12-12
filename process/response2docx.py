@@ -745,14 +745,14 @@ class DynamicDocxRenderer:
         # Giải thích từng ý - THÊM XỬ LÝ LATEX
         for gt in cau.get("giai_thich", []):
             p_gt = self.doc.add_paragraph()
-            p_gt.add_run("- ")
+            p_gt.add_run('+) "')
             process_text_with_latex(gt.get('noi_dung_y', ''), p_gt)  
-            run_kl = p_gt.add_run(f" - {gt.get('ket_luan', 'SAI')}.")
+            run_kl = p_gt.add_run(f'" - {gt.get("ket_luan", "SAI")}. ')
             run_kl.bold = True
             
             if gt.get('giai_thich'):
-                p_gt_detail = self.doc.add_paragraph()
-                process_text_with_latex(gt.get('giai_thich', ''), p_gt_detail)  
+                # p_gt_detail = self.doc.add_paragraph()
+                process_text_with_latex(gt.get('giai_thich', ''), p_gt)  
     
     def render_question_tra_loi_ngan(self, cau: Dict):
         """Render câu hỏi trả lời ngắn"""
