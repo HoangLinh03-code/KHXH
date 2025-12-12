@@ -1,0 +1,16 @@
+.env
+build/
+dist/
+__pycache__/
+*.pkg
+*.dll
+*.exe
+*.spec
+*.json
+venv/
+output/
+processing_progress.json
+*.html
+*.png
+*.jpg
+test/
